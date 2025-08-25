@@ -3,5 +3,5 @@ provider "aws" {
 }
 
 module "webserver_cluster" {
-    source = "github.com/steven2710/tf2//modules/services/webserver-cluster/?ref=v0.0.2"
+    source = "github.com/steven2710/tf4//live/global/iam/variables.tf"
 }
