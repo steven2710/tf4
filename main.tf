@@ -9,10 +9,10 @@ module "create_users" {
     
 }
 
-/*output "all_user_names" {
+output "all_user_names" {
   value = module.create_users.created_user_names
 }
-*/
+
 
 /*
 Tạo module có tên gọi là "create_users", với source là github.com/steven2710/tf4//live/global/iam/
