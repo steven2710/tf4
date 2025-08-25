@@ -4,11 +4,9 @@ provider "aws" {
 
 module "create_users" {
     source = "github.com/steven2710/tf4//live/global/iam/"
-    user_names = ["Steven", "Joe", "Bush", "Peter"]
-
-    
+    user_names = ["Steven", "Joe", "Bush", "Peter"]  
 }
-
+# Print out all username, với create_users là tên của module, còn created_user_names là tên của output trong file outputs.tf nằm trong /live/global/iam/
 output "all_user_names" {
   value = module.create_users.created_user_names
 }
@@ -89,6 +87,18 @@ module.create_users.aws_iam_user.example[3]: Creation complete after 2s [id=Pete
 
 Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
 hiepnt@LAP52-HiepNT:/mnt/d/Document/Terraform/LAB/LAB4$ 
+
+
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+all_user_names = [
+  "Steven",
+  "Joe",
+  "Bush",
+  "Peter",
+]
 */
 
 
