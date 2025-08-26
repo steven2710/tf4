@@ -4,15 +4,8 @@ provider "aws" {
 
 module "create_users" {
   source = "github.com/steven2710/tf4//live/global/iam/?ref=v0.0.5"
-  user_names = ["Steven1", "Trump1"]
   
-  for_each = user_roles
-
-  name = each.key   # tên user
-  # Có thể gán role (tag chẳng hạn) từ each.value
-  tags = {
-    Role = each.value
-  }
+  
 }
 
 
