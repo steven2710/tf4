@@ -1,10 +1,17 @@
 provider "aws" {
     region = "ap-southeast-1"
+    # Tags to apply to all AWS resources by default
+    default_tags {
+      tags = {
+        Owner = "HiepNT"
+        ManagedBy = "Terraform"
+      }
+    }
 }
 
 module "create_users" {
-  source = "github.com/steven2710/tf4//live/global/iam/?ref=v0.0.6"
-  
+  #source = "github.com/steven2710/tf4//live/global/iam/?ref=v0.0.6"
+  source = "./live/global/iam/"
   
 }
 
