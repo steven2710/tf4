@@ -9,7 +9,7 @@ default = {
 
 resource "aws_iam_user" "example" {
     for_each = var.user_names 
-    user_names = [each.key]
+    user_names = each.key
     tags = {
     Role = each.value
   }
