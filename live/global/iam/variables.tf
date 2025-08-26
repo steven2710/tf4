@@ -1,6 +1,6 @@
 variable "user_names" {
 description = "Create IAM users with these names"
-type = list(string)
+type = map(string)
 default = {
     Steven1   = "admin"
     Trump1     = "dev"
