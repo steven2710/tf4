@@ -3,8 +3,8 @@ provider "aws" {
 }
 
 module "create_users" {
-    source = "github.com/steven2710/tf4//live/global/iam/?ref=v0.0.2"
-    user_names = ["Steven", "Joe", "Bush", "Peter"]  
+    source = "github.com/steven2710/tf4//live/global/iam/?ref=v0.0.3"
+    user_names = ["Steven", "Trump"]  
 }
 # Print out all username, với create_users là tên của module, còn created_user_names là tên của output trong file outputs.tf nằm trong /live/global/iam/
 output "all_user_names" {
